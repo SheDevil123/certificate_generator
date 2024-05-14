@@ -71,7 +71,7 @@ def generator(FROM_DATE,TO_DATE,SIGNATURE_NAMES,DESIGNATIONS,text_2,text_3,templ
 		template_adjustment=30
 	
 	if template_given==True:
-		img=Image.open("uploads\\custom_template.png")
+		img=Image.open("uploads/custom_template.png")
 
 	sign1=Image.open(SIGN_PATHS[0])
 	sign2=Image.open(SIGN_PATHS[1])
@@ -93,17 +93,17 @@ def generator(FROM_DATE,TO_DATE,SIGNATURE_NAMES,DESIGNATIONS,text_2,text_3,templ
 
 	draw_obj= ImageDraw.Draw(img)
 
-	arial=ImageFont.truetype("fonts\ARIALBD.TTF", size=36)
+	arial=ImageFont.truetype("fonts/ARIALBD.TTF", size=36)
 	#small_arial=ImageFont.truetype(r"E:\certificate generator 2.0\fonts\ARIALBD.TTF", size=30)
-	segoe_UI_bold=ImageFont.truetype(r"fonts\Segoe UI Bold.ttf",size=30)
-	arial_normal=ImageFont.truetype(r"fonts\ARIAL.TTF",size=28)
+	segoe_UI_bold=ImageFont.truetype(r"fonts/Segoe UI Bold.ttf",size=30)
+	arial_normal=ImageFont.truetype(r"fonts/ARIAL.TTF",size=28)
 
 	# text_2="Summer School Program 2024"
 	# text_3="Center for Artificial Intelligence"
 
 	#2nd line
 	if text_2_size!=36:
-		arial_2=ImageFont.truetype(r"fonts\ARIALBD.TTF", size=text_2_size)
+		arial_2=ImageFont.truetype(r"fonts/ARIALBD.TTF", size=text_2_size)
 	else:
 		arial_2=arial
 	y_extra_line2=arial.getbbox(text_2)[3]-arial_2.getbbox(text_2)[3]
@@ -111,7 +111,7 @@ def generator(FROM_DATE,TO_DATE,SIGNATURE_NAMES,DESIGNATIONS,text_2,text_3,templ
 
 	#3rd line
 	if text_3_size!=36:
-		arial_3=ImageFont.truetype(r"fonts\ARIALBD.TTF", size=text_3_size)
+		arial_3=ImageFont.truetype(r"fonts/ARIALBD.TTF", size=text_3_size)
 	else:
 		arial_3=arial
 	y_extra_line3=arial.getbbox(text_3)[3]-arial_3.getbbox(text_3)[3]
