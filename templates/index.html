@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <input type="file" name="sheet" accept=".xml, .xlsx"><br>
+        <input type="date" name="from" id="from" value="From">
+        <label for="from">From Date</label><br>
+        <input type="date" name="to" id="to" value="To">
+        <label for="to">To Date</label><br>
+
+        <h3>first signature</h3>
+        <input type="text" id="sign1_name" name="sign1_name" placeholder="Name"><br>
+        <input type="text" id="sign1_desig" name="sign1_desig" placeholder="Designation">
+        <input type="file" name="sign1_img" accept=".png" ><br>
+        
+        <h3>Second signature</h3>
+        <input type="text" id="sign2_name" name="sign2_name" placeholder="Name"><br>
+        <input type="text" id="sign2_desig" name="sign2_desig" placeholder="Designation">
+        <input type="file" name="sign2_img" accept=".png" ><br>
+
+        <h3>Third signature</h3>
+        <input type="text" id="sign3_name" name="sign3_name" placeholder="Name"><br>
+        <input type="text" id="sign3_desig" name="sign3_desig" placeholder="Designation">
+        <input type="file" name="sign3_img" accept=".png" ><br>
+
+        <h3>Second line text</h3><br>
+        <input type="text" id="2nd_line" name="2nd_line" placeholder="Second line text"><br>
+
+        <h3>Third line text</h3><br>
+        <input type="text" id="3rd_line" name="3rd_line" placeholder="Third line text"><br>
+
+        <h2>Optional</h2><br>
+        <h4>Template</h4><br>
+        <input type="file" name="template" accept=".png" >
+
+        <h4>Second line font size</h4>
+        <input type="number" id="2nd_line_font_size" name="2nd_line_font_size" min="20" max="60" value="36">
+
+        <h4>Third line font size</h4>
+        <input type="number" id="3rd_line_font_size" name="3rd_line_font_size" min="20" max="60" value="36" >
+
+        <button type="submit">Upload</button><br>
+
+        <h2>{{msg}}</h2>
+    </form>
+
+</body>
+</html>
