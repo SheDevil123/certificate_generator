@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, flash, render_template, send_from_directory
+from flask import Flask, request, redirect, url_for, flash, render_template, send_from_directory,send_file
 from werkzeug.utils import secure_filename
 from PIL import Image, ImageDraw, ImageFont
 import pandas as pd
@@ -227,6 +227,13 @@ def download():
 def downloading():
 	return send_from_directory("outputs","output.zip")
 
+@app.route("/krita_file")
+def krita_file():
+	return send_file("new_new_temp.kra")
+
+@app.route("/sheet")
+def sheet():
+	return send_file("sheet.xlsx")
 
 if __name__ == '__main__':
 	app.run(debug=True)
